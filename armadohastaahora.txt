@@ -1,0 +1,14 @@
+c:/xampp/htdocs/
+sistema
+	config
+	css
+	funciones
+		* conexion.php 
+		 * marcas.php
+		* categorias.php (eliminar y verCatePorID)
+		*usuarios.php (eliminar, modificar)
+
+	includes
+	js
+	productos
+	xtras
