@@ -1,6 +1,6 @@
 <?php 
 	require 'funciones/conexion.php';
-	require 'funciones/marcas.php';
+	require 'funciones/marca.php';
 	$chequeo=agregarMarca();
 	include 'includes/header.html';
 	include 'includes/nav.php';
@@ -21,3 +21,4 @@
 </main>
 <?php include 'includes/footer.php';
 ?>
+
