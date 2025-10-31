@@ -3,7 +3,7 @@
 
 function listaMarcas(){
 
-	$link=concetar();
+	$link=conectar();
 	$sql= "SELECT idMarca, mkNombre FROM marcas"; //lo que esta despues de from es la tabla de donde traigo la informacion y lo que esta despues del select son los nombres de los campos de esa tabla//
 	$resultado=mysql_query($link,$sql);
 	RETURN $resultado;
@@ -14,7 +14,7 @@ function listaMarcas(){
 
 	$mkNombre=$_POST['mkNombre'];  //recibe del formulario el nombre de la marca de un input que se llama mkNombre//
 	
-	$link=concetar();
+	$link=conectar();
 	$sql="INSERT INTO marcas (mkNombre) VALUES ($mkNombre)";
 	$resultado=mysql_query($link,$sql);
 	return $resultado;	
