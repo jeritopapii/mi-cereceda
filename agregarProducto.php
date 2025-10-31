@@ -9,7 +9,7 @@
  	<h1> Alta de nuevo Producto </h1>
 <?php 
 	$class='danger';
-	$mensaje='No se puede agregar un product';
+	$mensaje='No se puede agregar un producto';
 
 	if($chequeo){
 		$class='success';
