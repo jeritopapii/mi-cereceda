@@ -1,6 +1,6 @@
 <?php
 require 'funciones/conexion.php';
-require 'funciones/marcas.php';
+require 'funciones/marca.php';
 
 $id = $_GET['id'] ?? null;
 $chequeo = eliminarMarca($id);
