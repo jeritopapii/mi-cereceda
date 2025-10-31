@@ -11,7 +11,7 @@
 	<h1> Panel de administracon de Marcas </h1>
 
 	<a href="admin.php" class="btn btn-outline-secondary m-3">
-		VOLVER A PRINICIPAL
+		VOLVER A PRINCIPAL
 	</a>
 
 	<table class="table table-bordered table-striped table-hover">
@@ -54,4 +54,5 @@
 
 <?php 
 include 'includes/footer.php'; 
+
 ?>
