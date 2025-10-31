@@ -8,7 +8,7 @@
 	const BASE = 'catalogo'; 
 
 //conecta con la base de datos//
-	function concectar () { 
+	function conectar () { 
 
 	$link = mysqli_connect( SERVER, USUARIO, CLAVE, BASE ); 
 
