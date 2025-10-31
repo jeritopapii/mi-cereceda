@@ -1,6 +1,6 @@
 <?php
     require 'funciones/conexion.php';
-    require 'funciones/marcas.php';
+    require 'funciones/marca.php';
     require 'funciones/categorias.php';
     require 'funciones/productos.php';
 
