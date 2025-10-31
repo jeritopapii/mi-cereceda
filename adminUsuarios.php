@@ -19,7 +19,7 @@
  				<th>id</th>
  				<th>Nombre</th>
  				<th>Apellido</th>
- 				<th>E-mail</th>
+ 				<th>Email</th>
  				<th colspan="2"> 
  					<a href="formAgregarUsuario.php" class="btn btn-dark"> Agregrar</a> 
  				</th>
@@ -50,3 +50,4 @@
 <?php 
 include 'includes/footer.php';
 ?>
+
