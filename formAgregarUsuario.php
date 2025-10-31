@@ -10,7 +10,7 @@ include 'includes/nav.php';
 
 <main class="container">
 
-<h1>Alta de nuevo usaurio</h1>
+<h1>Alta de nuevo usuario</h1>
 
 <div class="alert alert-secondary p-4 col-8 mx-auto">
 	<form action="agregarUsuario.php" method="POST">
@@ -36,4 +36,5 @@ include 'includes/nav.php';
 	</a>
 </div>
 </main>
+
 <?php include 'includes/footer.php'; ?>
