@@ -1,6 +1,6 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/marcas.php';
+	require 'funciones/marca.php';
 	require 'funciones/categorias.php';
 	require 'funciones/productos.php';
 
@@ -34,7 +34,7 @@
 				<div class="form-group">
 					<label for='idMarca'>Marca</label>
 					<select class="form-control" name="idMarca" id="idMarca" required>
-						<option value="">Seleccione un amarca</option>
+						<option value="">Seleccione una marca</option>
 <?php
 			while($marca=mysqli_fetch_assoc($marcas)){
 ?>
@@ -89,3 +89,4 @@
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
