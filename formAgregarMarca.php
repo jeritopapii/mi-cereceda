@@ -1,6 +1,6 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/marcas.php';
+	require 'funciones/marca.php';
 
 
 	
@@ -32,3 +32,4 @@
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
