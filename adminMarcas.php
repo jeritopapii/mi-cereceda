@@ -1,6 +1,6 @@
 <?php
 		require 'funciones/conexion.php';
-		require 'funciones/marcas.php';
+		require 'funciones/marca.php';
 			$marcas=listarMarcas();
 
 		include 'includes/header.html';
@@ -54,4 +54,5 @@
 
 <?php 
 include 'includes/footer.php'; 
+
 ?>
