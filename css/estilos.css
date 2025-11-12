@@ -1,0 +1,146 @@
+/* === ESTILO GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+.header {
+  background-color: #1a1a1a;
+  color: #f8f8f8;
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 3px solid #cc0000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* === MAIN === */
+.main {
+  min-height: 70vh;
+}
+
+.panel {
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.panel h2 {
+  color: #111;
+}
+
+.panel p {
+  color: #555;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 3px solid #cc0000;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+/* === DASHBOARD BUTTONS === */
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.btn-dashboard {
+  background-color: #1a1a1a;
+  color: #f8f8f8;
+  padding: 1.2rem 2.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-dashboard:hover {
+  background-color: #cc0000;
+  color: #fff;
+  transform: translateY(-3px);
+  border-color: #a30000;
+}
+
+.btn-dashboard i {
+  font-size: 1.5rem;
+}
+
+.panel {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+.panel h2 {
+    margin-bottom: 1.5rem;
+}
+.btn-dashboard {
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 0.2rem;
+    display: inline-block;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+.btn-dashboard:hover {
+    background-color: #cc0000;
+    color: #fff;
+    transform: translateY(-3px);
+    border-color: #a30000;
+}
+.tabla-panel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+.tabla-panel th, .tabla-panel td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: center;
+}
+.tabla-panel th {
+    background-color: #f4f4f4;
+}
+.tabla-panel img {
+    max-width: 80px;
+    border-radius: 5px;
+}
