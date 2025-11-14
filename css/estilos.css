@@ -144,3 +144,53 @@ body {
     max-width: 80px;
     border-radius: 5px;
 }
+body {
+    background-color: #f4f7ff; /* Fondo muy claro y suave */
+}
+
+/* Estilo para los títulos de sección */
+.panel h2 {
+    color: #004a99; /* Azul fuerte para títulos */
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #004a99;
+    display: inline-block; /* Asegura que la línea solo cubra el título */
+    margin-bottom: 40px !important;
+}
+
+/* --- Estilos de Tabla (.tabla-panel) --- */
+
+.tabla-panel {
+    border-radius: 8px; /* Bordes redondeados para toda la tabla */
+    overflow: hidden; /* Necesario para que el borde redondeado se aplique a los bordes de la tabla */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    background-color: white;
+}
+
+/* Encabezados (TH) */
+.tabla-panel thead th {
+    background-color: #007bff; /* Fondo azul para el encabezado */
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 15px 12px; /* Aumenta el padding para separar las categorías */
+    border: none; /* Quitamos bordes internos del header */
+}
+
+/* Celdas del Cuerpo (TD) */
+.tabla-panel tbody td {
+    padding: 12px 12px; /* Aumenta el padding para separar el contenido */
+    border-color: #eee; /* Bordes de filas muy suaves */
+    vertical-align: middle;
+}
+
+/* Efecto de fila al pasar el mouse */
+.tabla-panel tbody tr:hover {
+    background-color: #eaf3ff; /* Un azul muy suave al pasar el mouse */
+}
+
+/* Ajuste para las imágenes */
+.tabla-panel img {
+    border: 1px solid #ddd;
+}

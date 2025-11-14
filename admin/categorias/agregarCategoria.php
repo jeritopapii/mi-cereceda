@@ -1,82 +1,64 @@
-<?php 
+<?php
+// CORRECCIÓN: El archivo de funciones debe llamarse 'categorias.php' (en plural)
 require_once '../../funciones/conexion.php';
-require_once '../../funciones/categoria.php';
+require_once '../../funciones/categorias.php'; // ESTA ES LA LÍNEA MODIFICADA (Añadimos 's')
 
-$chequeo = agregarCategoria();
+$categoria = ''; // Variable para guardar el nombre de la categoría
 
-include '../../includes/header.php';
+// Si se envió el formulario (POST)
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // 1. Obtener el valor enviado
+    $catNombre = $_POST['catNombre'];
+
+    // 2. Ejecutar la función para agregar la categoría (debes tener una función llamada 'agregarCategoria' en tu archivo 'categorias.php')
+    if (agregarCategoria($catNombre)) {
+        // Redirigir al panel después de agregar
+        header('location: adminCategorias.php?estado=agregada');
+        exit;
+    } else {
+        // Manejar error si no se pudo agregar
+        $error = "Error al agregar la categoría.";
+    }
+}
+
+// Incluimos la plantilla de cabecera
+include '../../includes/header.php'; 
 ?>
 
-<main class="container my-5">
-  <section class="panel mx-auto col-lg-8 col-md-10 p-5 shadow-sm rounded-3 bg-white text-center">
-    <h1 class="fw-semibold mb-4">Alta de Nueva Categoría</h1>
+<main class="main container my-5">
+    <section class="panel panel-form">
+        <h2 class="text-center mb-5">Alta de nueva categoría</h2>
 
-    <?php 
-      $class = 'danger';
-      $mensaje = 'No se pudo agregar la categoría.';
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Mostramos error si existe -->
+                <?php if (isset($error)) { ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $error ?>
+                    </div>
+                <?php } ?>
 
-      if ($chequeo) {
-          $class = 'success';
-          $mensaje = 'Categoría agregada correctamente.';
-      }
-    ?>
+                <form action="agregarCategoria.php" method="post">
+                    <div class="mb-3">
+                        <label for="catNombre" class="form-label">Nombre de la categoría</label>
+                        <input type="text" 
+                               name="catNombre" 
+                               id="catNombre" 
+                               class="form-control" 
+                               required>
+                    </div>
 
-    <div class="alert alert-<?= $class ?> py-3 fs-5">
-      <?= $mensaje ?>
-    </div>
-
-    <a href="adminCategorias.php" class="btn btn-dark mt-3 px-4">Volver al Panel</a>
-  </section>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Agregar Categoría</button>
+                        <a href="adminCategorias.php" class="btn btn-secondary">Volver al Panel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </main>
 
-<!-- === ESTÉTICA DEL PANEL === -->
-<style>
-  body {
-    background-color: #f4f4f4;
-    color: #222;
-    font-family: "Poppins", sans-serif;
-    line-height: 1.6;
-  }
-
-  h1 {
-    color: #111;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .panel {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 3rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .alert-success {
-    background-color: #e6ffed;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-  }
-
-  .alert-danger {
-    background-color: #ffeaea;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-  }
-
-  .btn-dark {
-    background-color: #1a1a1a;
-    border: none;
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-
-  .btn-dark:hover {
-    background-color: #cc0000;
-    color: #fff;
-  }
-</style>
-
-<?php include '../../includes/footer.php'; ?>
-
+<?php 
+// Incluimos la plantilla de pie de página
+include '../../includes/footer.php'; 
+?>
